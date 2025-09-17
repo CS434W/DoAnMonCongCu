@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="WebBanHang.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Quản lý Admin</title>
+    <style>
+        .menu { background-color: #333; padding: 10px; }
+        .menu a { color: white; margin: 10px; text-decoration: none; }
+        .content { padding: 20px; }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <div class="menu">
+            <a href="QuanLySanPham.aspx">Quản lý Sản phẩm</a>
+            <a href="QuanLyKhuyenMai.aspx">Quản lý Khuyến mãi</a>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>
