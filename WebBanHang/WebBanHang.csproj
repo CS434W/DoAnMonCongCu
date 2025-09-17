@@ -75,6 +75,7 @@
     <Content Include="admin\qlsanpham.aspx" />
     <Content Include="css\admin-style.css" />
     <Content Include="css\style.css" />
+    <Content Include="giohang.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\acer_aspire_vero.jpg" />
     <Content Include="images\acer_nitro_5.jpg" />
@@ -221,6 +222,12 @@
     </Compile>
     <Compile Include="admin\qlsanpham.aspx.designer.cs">
       <DependentUpon>qlsanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giohang.aspx.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giohang.aspx.designer.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
