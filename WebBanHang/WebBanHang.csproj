@@ -211,6 +211,7 @@
     <Content Include="images\xiaomi13ultra.jpg" />
     <Content Include="images\xiaomi_powerbank_30000mah.jpg" />
     <Content Include="images\zenbook14.jpg" />
+    <Content Include="QliSanPham.aspx" />
     <Content Include="trangchu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -227,6 +228,12 @@
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QliSanPham.aspx.cs">
+      <DependentUpon>QliSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QliSanPham.aspx.designer.cs">
+      <DependentUpon>QliSanPham.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
