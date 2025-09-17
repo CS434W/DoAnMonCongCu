@@ -216,6 +216,34 @@
     <Content Include="trangchu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
+<ItemGroup>
+  <!-- dangki -->
+  <Content Include="dangky.aspx" />
+  <Compile Include="dangky.aspx.cs">
+    <DependentUpon>dangky.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="dangky.aspx.designer.cs">
+    <DependentUpon>dangky.aspx</DependentUpon>
+  </Compile>
+
+  <!-- dangnhap -->
+  <Content Include="dangnhap.aspx" />
+  <Compile Include="dangnhap.aspx.cs">
+    <DependentUpon>dangnhap.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="dangnhap.aspx.designer.cs">
+    <DependentUpon>dangnhap.aspx</DependentUpon>
+  </Compile>
+
+  <!-- QLThue -->
+  <Content Include="QLThue.aspx" />
+  <Compile Include="QLThue.aspx.cs">
+    <DependentUpon>QLThue.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="QLThue.aspx.designer.cs">
+    <DependentUpon>QLThue.aspx</DependentUpon>
+  </Compile>
+</ItemGroup>
   <ItemGroup>
     <Compile Include="admin\qlsanpham.aspx.cs">
       <DependentUpon>qlsanpham.aspx</DependentUpon>
