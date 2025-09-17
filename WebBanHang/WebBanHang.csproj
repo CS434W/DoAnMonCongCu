@@ -211,6 +211,7 @@
     <Content Include="images\xiaomi13ultra.jpg" />
     <Content Include="images\xiaomi_powerbank_30000mah.jpg" />
     <Content Include="images\zenbook14.jpg" />
+    <Content Include="nokia.aspx" />
     <Content Include="trangchu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -226,6 +227,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
+    <Compile Include="nokia.aspx.cs">
+      <DependentUpon>nokia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nokia.aspx.designer.cs">
+      <DependentUpon>nokia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
