@@ -270,6 +270,15 @@
     <DependentUpon>oppo.aspx</DependentUpon>
   </Compile>
 </ItemGroup>
+<ItemGroup>
+  <Content Include="thanhtoan.aspx" />
+  <Compile Include="thanhtoan.aspx.cs">
+    <DependentUpon>thanhtoan.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="thanhtoan.aspx.designer.cs">
+    <DependentUpon>thanhtoan.aspx</DependentUpon>
+  </Compile>
+</ItemGroup>
 
   <ItemGroup>
     <Compile Include="admin\qlsanpham.aspx.cs">
