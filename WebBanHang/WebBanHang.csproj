@@ -245,6 +245,32 @@
     <DependentUpon>QLThue.aspx</DependentUpon>
   </Compile>
 </ItemGroup>
+<ItemGroup>
+  <Content Include="apple.aspx" />
+  <Compile Include="apple.aspx.cs">
+    <DependentUpon>apple.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="apple.aspx.designer.cs">
+    <DependentUpon>apple.aspx</DependentUpon>
+  </Compile>
+
+  <Content Include="chitietsp.aspx" />
+  <Compile Include="chitietsp.aspx.cs">
+    <DependentUpon>chitietsp.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="chitietsp.aspx.designer.cs">
+    <DependentUpon>chitietsp.aspx</DependentUpon>
+  </Compile>
+
+  <Content Include="oppo.aspx" />
+  <Compile Include="oppo.aspx.cs">
+    <DependentUpon>oppo.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="oppo.aspx.designer.cs">
+    <DependentUpon>oppo.aspx</DependentUpon>
+  </Compile>
+</ItemGroup>
+
   <ItemGroup>
     <Compile Include="admin\qlsanpham.aspx.cs">
       <DependentUpon>qlsanpham.aspx</DependentUpon>
