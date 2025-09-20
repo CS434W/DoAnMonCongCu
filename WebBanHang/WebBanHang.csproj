@@ -75,6 +75,7 @@
     <Content Include="admin\qlsanpham.aspx" />
     <Content Include="css\admin-style.css" />
     <Content Include="css\style.css" />
+    <Content Include="giohang.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\acer_aspire_vero.jpg" />
     <Content Include="images\acer_nitro_5.jpg" />
@@ -212,9 +213,38 @@
     <Content Include="images\xiaomi_powerbank_30000mah.jpg" />
     <Content Include="images\zenbook14.jpg" />
     <Content Include="QliSanPham.aspx" />
+    <Content Include="nokia.aspx" />
     <Content Include="trangchu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
+<ItemGroup>
+  <!-- dangki -->
+  <Content Include="dangky.aspx" />
+  <Compile Include="dangky.aspx.cs">
+    <DependentUpon>dangky.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="dangky.aspx.designer.cs">
+    <DependentUpon>dangky.aspx</DependentUpon>
+  </Compile>
+
+  <!-- dangnhap -->
+  <Content Include="dangnhap.aspx" />
+  <Compile Include="dangnhap.aspx.cs">
+    <DependentUpon>dangnhap.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="dangnhap.aspx.designer.cs">
+    <DependentUpon>dangnhap.aspx</DependentUpon>
+  </Compile>
+
+  <!-- QLThue -->
+  <Content Include="QLThue.aspx" />
+  <Compile Include="QLThue.aspx.cs">
+    <DependentUpon>QLThue.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="QLThue.aspx.designer.cs">
+    <DependentUpon>QLThue.aspx</DependentUpon>
+  </Compile>
+</ItemGroup>
   <ItemGroup>
     <Compile Include="admin\qlsanpham.aspx.cs">
       <DependentUpon>qlsanpham.aspx</DependentUpon>
@@ -223,10 +253,23 @@
     <Compile Include="admin\qlsanpham.aspx.designer.cs">
       <DependentUpon>qlsanpham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="giohang.aspx.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giohang.aspx.designer.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
+    <Compile Include="nokia.aspx.cs">
+      <DependentUpon>nokia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nokia.aspx.designer.cs">
+      <DependentUpon>nokia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QliSanPham.aspx.cs">
       <DependentUpon>QliSanPham.aspx</DependentUpon>
