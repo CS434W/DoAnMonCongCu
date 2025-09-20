@@ -288,6 +288,15 @@
     <DependentUpon>GiamGiaNV.aspx</DependentUpon>
   </Compile>
 </ItemGroup>
+<ItemGroup>
+  <Content Include="timkiem.aspx" />
+  <Compile Include="timkiem.aspx.cs">
+    <DependentUpon>timkiem.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="timkiem.aspx.designer.cs">
+    <DependentUpon>timkiem.aspx</DependentUpon>
+  </Compile>
+</ItemGroup>
 
   <ItemGroup>
     <Compile Include="admin\qlsanpham.aspx.cs">
