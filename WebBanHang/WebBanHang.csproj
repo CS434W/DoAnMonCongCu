@@ -279,6 +279,15 @@
     <DependentUpon>thanhtoan.aspx</DependentUpon>
   </Compile>
 </ItemGroup>
+<ItemGroup>
+  <Content Include="GiamGiaNV.aspx" />
+  <Compile Include="GiamGiaNV.aspx.cs">
+    <DependentUpon>GiamGiaNV.aspx</DependentUpon>
+  </Compile>
+  <Compile Include="GiamGiaNV.aspx.designer.cs">
+    <DependentUpon>GiamGiaNV.aspx</DependentUpon>
+  </Compile>
+</ItemGroup>
 
   <ItemGroup>
     <Compile Include="admin\qlsanpham.aspx.cs">
