@@ -1,0 +1,534 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21FA43DE-736F-450E-9A6E-853F06370C24}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebBanHang</RootNamespace>
+    <AssemblyName>WebBanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44394</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\qlsanpham.aspx" />
+    <Content Include="apple.aspx" />
+    <Content Include="BaoCaoDoanhThu.aspx" />
+    <Content Include="chitietsp.aspx" />
+    <Content Include="css\admin-style.css" />
+    <Content Include="css\style.css" />
+    <Content Include="dangky.aspx" />
+    <Content Include="dangnhap.aspx" />
+    <Content Include="dienthoai.aspx" />
+    <Content Include="GiamGiaNV.aspx" />
+    <Content Include="giohang.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="hoantat.aspx" />
+    <Content Include="images\acer_aspire_vero.jpg" />
+    <Content Include="images\acer_nitro_5.jpg" />
+    <Content Include="images\acer_predator_helios.jpg" />
+    <Content Include="images\acer_swift_edge_16.jpg" />
+    <Content Include="images\airpodspro.jpg" />
+    <Content Include="images\alienware_m18.jpg" />
+    <Content Include="images\anhduoi1.png" />
+    <Content Include="images\anhduoi2.png" />
+    <Content Include="images\anhduoi3.png" />
+    <Content Include="images\anhduoi4.png" />
+    <Content Include="images\anhmoi.jpg" />
+    <Content Include="images\anhmoi1.jpg" />
+    <Content Include="images\ankercharger.jpg" />
+    <Content Include="images\anker_20000mah.jpg" />
+    <Content Include="images\anker_usb_c_100w.jpg" />
+    <Content Include="images\asusrogphone6.jpg" />
+    <Content Include="images\asus_rog_strix_g16.jpg" />
+    <Content Include="images\asus_tuf_f15.jpg" />
+    <Content Include="images\asus_zenbook_pro_duo.jpg" />
+    <Content Include="images\baner2.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner10.png" />
+    <Content Include="images\banner20.jpg" />
+    <Content Include="images\banner21.png" />
+    <Content Include="images\banner3.jpg" />
+    <Content Include="images\banner4.jpg" />
+    <Content Include="images\banner5.jpg" />
+    <Content Include="images\banner5.png" />
+    <Content Include="images\banner7.jpg" />
+    <Content Include="images\banner8.jpg" />
+    <Content Include="images\banner9.jpg" />
+    <Content Include="images\bannern.jpg" />
+    <Content Include="images\belkin_usb_c_lightning.jpg" />
+    <Content Include="images\bentrai.jpg" />
+    <Content Include="images\blackshark5pro.jpg" />
+    <Content Include="images\blue_yeti_x.jpg" />
+    <Content Include="images\bose_qc45.jpg" />
+    <Content Include="images\cooler_master_notepal_x3.jpg" />
+    <Content Include="images\corsair_k95_rgb_platinum.jpg" />
+    <Content Include="images\corsair_vengeance_lpx.jpg" />
+    <Content Include="images\dellxps15.jpg" />
+    <Content Include="images\dell_g15_gaming.jpg" />
+    <Content Include="images\dell_inspiron_16_plus.jpg" />
+    <Content Include="images\dell_xps_15.jpg" />
+    <Content Include="images\duoicung.png" />
+    <Content Include="images\galaxys22.jpg" />
+    <Content Include="images\galaxys23ultra.jpg" />
+    <Content Include="images\galaxyzfold4.jpg" />
+    <Content Include="images\galaxy_book3_pro.jpg" />
+    <Content Include="images\giamgia.png" />
+    <Content Include="images\gigabyte_aero_16.jpg" />
+    <Content Include="images\googlepixel7pro.jpg" />
+    <Content Include="images\googlepixel8pro.jpg" />
+    <Content Include="images\honor90pro.jpg" />
+    <Content Include="images\honormagic5pro.jpg" />
+    <Content Include="images\hot.png" />
+    <Content Include="images\hpspectrex360.jpg" />
+    <Content Include="images\hp_envy_16.jpg" />
+    <Content Include="images\hp_omen_16.jpg" />
+    <Content Include="images\hp_pavilion_aero_13.jpg" />
+    <Content Include="images\hp_spectre_x360.jpg" />
+    <Content Include="images\hyperx_cloud_ii_wireless.jpg" />
+    <Content Include="images\iconsamsung.png" />
+    <Content Include="images\ideapad_gaming_3.jpg" />
+    <Content Include="images\infinixzeroultra.png" />
+    <Content Include="images\iphone13pro.jpg" />
+    <Content Include="images\iphone14.jpg" />
+    <Content Include="images\iphone14promax.jpg" />
+    <Content Include="images\iphone15promax.jpg" />
+    <Content Include="images\jbl_charge_5.jpg" />
+    <Content Include="images\jbl_tune_230nc.jpg" />
+    <Content Include="images\laptop.jpg" />
+    <Content Include="images\left.png" />
+    <Content Include="images\lenovo_legion_7i.jpg" />
+    <Content Include="images\lenovo_thinkpad_x1.jpg" />
+    <Content Include="images\lenovo_yoga_slim_7i.jpg" />
+    <Content Include="images\lg_gram_17.jpg" />
+    <Content Include="images\lg_ultra_pc_17.jpg" />
+    <Content Include="images\logitech_c922_pro.jpg" />
+    <Content Include="images\logitech_g_pro_x_superlight.jpg" />
+    <Content Include="images\logitech_litra_glow.jpg" />
+    <Content Include="images\logitech_mx_master_3s.jpg" />
+    <Content Include="images\logoapple.png" />
+    <Content Include="images\logooppo.png" />
+    <Content Include="images\logosamsung1.png" />
+    <Content Include="images\logoxiaomi.png" />
+    <Content Include="images\macbookair_m3.jpg" />
+    <Content Include="images\macbookpro.jpg" />
+    <Content Include="images\macbookpro_m2.jpg" />
+    <Content Include="images\mau2.png" />
+    <Content Include="images\mau3.png" />
+    <Content Include="images\mau4.png" />
+    <Content Include="images\motorolaedge30ultra.jpg" />
+    <Content Include="images\msi_creator_z16.jpg" />
+    <Content Include="images\msi_katana_gf66.jpg" />
+    <Content Include="images\mxmaster3.jpg" />
+    <Content Include="images\nokia.png" />
+    <Content Include="images\nokiaxr21.jpg" />
+    <Content Include="images\nubiaredmagic8pro.jpg" />
+    <Content Include="images\oneplus11.jpg" />
+    <Content Include="images\oplungiphone.jpg" />
+    <Content Include="images\oppo.png" />
+    <Content Include="images\oppofindx5.jpg" />
+    <Content Include="images\oppofindx5pro.jpg" />
+    <Content Include="images\pocof5pro.jpg" />
+    <Content Include="images\razer_blackwidow_v4.jpg" />
+    <Content Include="images\razer_blade_15.jpg" />
+    <Content Include="images\razer_firefly_v2.jpg" />
+    <Content Include="images\realme.png" />
+    <Content Include="images\realmegt3.jpg" />
+    <Content Include="images\redminote12proplus.jpg" />
+    <Content Include="images\rogphone7ultimate.jpg" />
+    <Content Include="images\samsung_990_pro.jpg" />
+    <Content Include="images\samsung_t7_ssd.jpg" />
+    <Content Include="images\samsung_wireless_charger.jpg" />
+    <Content Include="images\sony1.png" />
+    <Content Include="images\sonyxperia1iv.jpg" />
+    <Content Include="images\sonyxperia5v.jpg" />
+    <Content Include="images\sony_srs_xb43.jpg" />
+    <Content Include="images\sony_wf_1000xm4.jpg" />
+    <Content Include="images\sony_wh1000xm5.jpg" />
+    <Content Include="images\surface_laptop_6.jpg" />
+    <Content Include="images\targusbag.jpg" />
+    <Content Include="images\tecnophantomvfold.jpg" />
+    <Content Include="images\tplink_archer_ax6000.jpg" />
+    <Content Include="images\vivo.png" />
+    <Content Include="images\vivov29pro.jpg" />
+    <Content Include="images\vivox80pro.jpg" />
+    <Content Include="images\vivox90pro.png" />
+    <Content Include="images\wd_my_passport_4tb.jpg" />
+    <Content Include="images\xbox_elite_series_2.jpg" />
+    <Content Include="images\xiaomi12pro.jpg" />
+    <Content Include="images\xiaomi13ultra.jpg" />
+    <Content Include="images\xiaomi_powerbank_30000mah.jpg" />
+    <Content Include="images\zenbook14.jpg" />
+    <Content Include="laptop.aspx" />
+    <Content Include="lienhe.aspx" />
+    <Content Include="nokia.aspx" />
+    <Content Include="oppo.aspx" />
+    <Content Include="phukien.aspx" />
+    <Content Include="QliSanPham.aspx" />
+    <Content Include="qlkm.aspx" />
+    <Content Include="qlsp.aspx" />
+    <Content Include="QLThue.aspx" />
+    <Content Include="quanlidonhang.aspx" />
+    <Content Include="realme.aspx" />
+    <Content Include="samsung.aspx" />
+    <Content Include="sony.aspx" />
+    <Content Include="thanhtoan.aspx" />
+    <Content Include="Theogioidonhang.aspx" />
+    <Content Include="timkiem.aspx" />
+    <Content Include="TraLoiLienHe.aspx" />
+    <Content Include="trangchu.aspx" />
+    <Content Include="vivo.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="xiaomi.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\qlsanpham.aspx.cs">
+      <DependentUpon>qlsanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\qlsanpham.aspx.designer.cs">
+      <DependentUpon>qlsanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="apple.aspx.cs">
+      <DependentUpon>apple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="apple.aspx.designer.cs">
+      <DependentUpon>apple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoDoanhThu.aspx.cs">
+      <DependentUpon>BaoCaoDoanhThu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCaoDoanhThu.aspx.designer.cs">
+      <DependentUpon>BaoCaoDoanhThu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chitietsp.aspx.cs">
+      <DependentUpon>chitietsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chitietsp.aspx.designer.cs">
+      <DependentUpon>chitietsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dangky.aspx.cs">
+      <DependentUpon>dangky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dangky.aspx.designer.cs">
+      <DependentUpon>dangky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dangnhap.aspx.cs">
+      <DependentUpon>dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dangnhap.aspx.designer.cs">
+      <DependentUpon>dangnhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dienthoai.aspx.cs">
+      <DependentUpon>dienthoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dienthoai.aspx.designer.cs">
+      <DependentUpon>dienthoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GiamGiaNV.aspx.cs">
+      <DependentUpon>GiamGiaNV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GiamGiaNV.aspx.designer.cs">
+      <DependentUpon>GiamGiaNV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="giohang.aspx.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="giohang.aspx.designer.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hoantat.aspx.cs">
+      <DependentUpon>hoantat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hoantat.aspx.designer.cs">
+      <DependentUpon>hoantat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="laptop.aspx.cs">
+      <DependentUpon>laptop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="laptop.aspx.designer.cs">
+      <DependentUpon>laptop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lienhe.aspx.cs">
+      <DependentUpon>lienhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lienhe.aspx.designer.cs">
+      <DependentUpon>lienhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs" />
+    <Compile Include="nokia.aspx.cs">
+      <DependentUpon>nokia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nokia.aspx.designer.cs">
+      <DependentUpon>nokia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="oppo.aspx.cs">
+      <DependentUpon>oppo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="oppo.aspx.designer.cs">
+      <DependentUpon>oppo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="phukien.aspx.cs">
+      <DependentUpon>phukien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="phukien.aspx.designer.cs">
+      <DependentUpon>phukien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QliSanPham.aspx.cs">
+      <DependentUpon>QliSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QliSanPham.aspx.designer.cs">
+      <DependentUpon>QliSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qlkm.aspx.cs">
+      <DependentUpon>qlkm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qlkm.aspx.designer.cs">
+      <DependentUpon>qlkm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qlsp.aspx.cs">
+      <DependentUpon>qlsp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qlsp.aspx.designer.cs">
+      <DependentUpon>qlsp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QLThue.aspx.cs">
+      <DependentUpon>QLThue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QLThue.aspx.designer.cs">
+      <DependentUpon>QLThue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="quanlidonhang.aspx.cs">
+      <DependentUpon>quanlidonhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quanlidonhang.aspx.designer.cs">
+      <DependentUpon>quanlidonhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="realme.aspx.cs">
+      <DependentUpon>realme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="realme.aspx.designer.cs">
+      <DependentUpon>realme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="samsung.aspx.cs">
+      <DependentUpon>samsung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="samsung.aspx.designer.cs">
+      <DependentUpon>samsung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sony.aspx.cs">
+      <DependentUpon>sony.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sony.aspx.designer.cs">
+      <DependentUpon>sony.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thanhtoan.aspx.cs">
+      <DependentUpon>thanhtoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thanhtoan.aspx.designer.cs">
+      <DependentUpon>thanhtoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Theogioidonhang.aspx.cs">
+      <DependentUpon>Theogioidonhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Theogioidonhang.aspx.designer.cs">
+      <DependentUpon>Theogioidonhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="timkiem.aspx.cs">
+      <DependentUpon>timkiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="timkiem.aspx.designer.cs">
+      <DependentUpon>timkiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraLoiLienHe.aspx.cs">
+      <DependentUpon>TraLoiLienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraLoiLienHe.aspx.designer.cs">
+      <DependentUpon>TraLoiLienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu.aspx.cs">
+      <DependentUpon>trangchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trangchu.aspx.designer.cs">
+      <DependentUpon>trangchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vivo.aspx.cs">
+      <DependentUpon>vivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vivo.aspx.designer.cs">
+      <DependentUpon>vivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xiaomi.aspx.cs">
+      <DependentUpon>xiaomi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xiaomi.aspx.designer.cs">
+      <DependentUpon>xiaomi.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site1.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\nvqn1 - Web Deploy.pubxml" />
+    <Content Include="Site3.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controls\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61615</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44394/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

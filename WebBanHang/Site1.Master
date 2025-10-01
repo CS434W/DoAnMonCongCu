@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebBanHang.Site1" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> TechStore.vn</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <h1><i class="fas fa-laptop-code"></i>TechStore.vn</h1>
+                </div>
+                <div class="search">
+                    <asp:TextBox ID="txtTimKiem" runat="server" placeholder="Tìm kiếm sản phẩm..."></asp:TextBox>
+                    <asp:Button ID="btnTimKiem" runat="server" Text="Tìm" CssClass="search-button" OnClick="btnTimKiem_Click" />
+                </div>
+                <div class="user-menu">
+                    <a href="giohang.aspx" class="cart-link" runat="server">
+                        <i class="fas fa-shopping-cart"></i>Giỏ hàng
+    <span class="cart-count"><%= GetCartCount() %></span>
+                    </a>
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <asp:HyperLink ID="lnkDangNhap" runat="server" NavigateUrl="~/dangnhap.aspx">
+                                <i class="fas fa-user"></i> Đăng nhập
+                            </asp:HyperLink>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <div class="user-info">
+                                <i class="fas fa-user-circle"></i>
+                                <asp:Label ID="lblUserName" runat="server" CssClass="user-name"></asp:Label>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server"
+                                    LogoutText='<i class="fas fa-sign-out-alt"></i>'
+                                    LogoutAction="Redirect"
+                                    LogoutPageUrl="~/trangchu.aspx"
+                                    CssClass="logout-link" />
+                            </div>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </header>
+
+            
+            <nav class="brand-menu">
+
+                <div class="brand-grid">
+                    <asp:HyperLink runat="server" NavigateUrl="~/trangchu.aspx"
+                        Style="font-weight: bold; padding: 6px 10px; color: aqua; white-space: nowrap; width: 110px">
+    <i class="fas fa-home"></i>Trang chủ
+                    </asp:HyperLink>
+
+                    <asp:HyperLink runat="server" NavigateUrl="~/lienhe.aspx"
+                        Style="color: aqua;">
+     <i class="fas fa-envelope"></i> Liên hệ
+                    </asp:HyperLink>
+                    <a href="apple.aspx">
+                        <img src="/images/logoapple.png" alt="Apple" /></a>
+                    <a href="samsung.aspx">
+                        <img src="/images/logosamsung1.png" alt="Samsung" /></a>
+
+                    <a href="xiaomi.aspx">
+                        <img src="/images/logoxiaomi.png" alt="Xiaomi" /></a>
+                    <a href="nokia.aspx">
+                        <img src="/images/nokia.png" alt="Nokia" /></a>
+
+                    <a href="oppo.aspx">
+                        <img src="/images/oppo.png" alt="Oppo" /></a>
+                    <a href="realme.aspx">
+                        <img src="/images/realme.png" alt="Realme" /></a>
+
+                    <a href="vivo.aspx">
+                        <img src="/images/vivo.png" alt="Vivo" /></a>
+                    <a href="sony.aspx">
+                        <img src="/images/sony1.png" alt="Sony" /></a>
+                </div>
+            </nav>
+
+
+
+
+            <div class="main-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>Về TechStore</h3>
+                        <p>TechStore - Địa chỉ mua sắm công nghệ tin cậy hàng đầu Việt Nam</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Thông tin</h3>
+                        <ul>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Chính sách bảo mật</a></li>
+                            <li><a href="#">Điều khoản dịch vụ</a></li>
+                            <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Hỗ trợ</h3>
+                        <ul>
+                            <li><a href="#">Trung tâm hỗ trợ</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Phương thức thanh toán</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Liên hệ</h3>
+                        <p><i class="fas fa-map-marker-alt"></i>123 Đường ABC, Quận 1, TP.HCM</p>
+                        <p><i class="fas fa-phone"></i>1900 123 456</p>
+                        <p><i class="fas fa-envelope"></i>info@techstore.vn</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; <%: DateTime.Now.Year %> TechStore. All Rights Reserved.</p>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-amazon-pay"></i>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
